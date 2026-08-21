@@ -1,0 +1,39 @@
+{
+  "name": "veridian",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Promise Graph and release assurance for AI-assisted software",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run prisma:generate && next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prisma:generate": "node scripts/run-prisma.mjs generate",
+    "prisma:validate": "node scripts/run-prisma.mjs validate",
+    "check": "npm run prisma:validate && npm run typecheck && npm test && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "@prisma/client": "6.16.2",
+    "next": "15.5.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "4.1.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
+    "@types/node": "22.18.1",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.35.0",
+    "eslint-config-next": "15.5.2",
+    "prisma": "6.16.2",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  }
+}

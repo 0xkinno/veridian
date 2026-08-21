@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.context/
+.testmuai/evidence/
+research/competitors/
+node_modules/
+.next/
+dist/
+coverage/
+*.tsbuildinfo
+doc/

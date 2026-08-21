@@ -1,0 +1,535 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RecordOrigin {
+  REAL
+  DEVELOPMENT_FIXTURE
+}
+
+enum TrustStatus {
+  PENDING
+  DERIVED
+  TRUSTED
+  REJECTED
+  STALE
+}
+
+enum VerificationStatus {
+  PENDING
+  RUNNING
+  FAILED
+  VERIFIED
+  ERROR
+  STALE
+  INCONCLUSIVE
+}
+
+enum EvidenceStatus {
+  PENDING
+  VALID
+  INVALID
+  UNAVAILABLE
+}
+
+enum CreditCostStatus {
+  UNKNOWN
+  REPORTED
+}
+
+enum ReleaseStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  BLOCKED
+  STALE
+}
+
+enum InvariantKind {
+  SINGLE_USER
+  MULTI_ACTOR
+  SHARED_STATE
+  PERSISTENCE
+  AUTHORIZATION
+  FINANCIAL_TOTAL
+  INVENTORY
+  IDEMPOTENCY
+  UNIQUENESS
+  STATE_TRANSITION
+}
+
+enum ReleaseGateVerdict {
+  PENDING
+  SHIP
+  BLOCK
+  ERROR
+}
+
+model Project {
+  id                 String               @id @default(cuid())
+  slug               String               @unique
+  name               String
+  description        String?
+  origin             RecordOrigin         @default(REAL)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  sourceDocuments    SourceDocument[]
+  claims             Claim[]
+  useCases           UseCase[]
+  invariants         Invariant[]
+  adversarialScenarios AdversarialScenario[]
+  contracts          VerificationContract[]
+  runs               VerificationRun[]
+  evidencePacks      EvidencePack[]
+  coverageRecords    CoverageRecord[]
+  driftEvents        DriftEvent[]
+  repairs            RepairAttempt[]
+  releaseDecisions   ReleaseDecision[]
+  releaseCandidates  ReleaseCandidate[]
+  creditLedger       CreditLedgerEntry[]
+  gitBaselines       GitBaseline[]
+  agentRuns          AgentRun[]
+}
+
+model SourceDocument {
+  id             String         @id @default(cuid())
+  projectId      String
+  stableKey      String
+  title          String
+  mediaType      String
+  locator        String
+  origin         RecordOrigin   @default(REAL)
+  trust          TrustStatus    @default(PENDING)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  project        Project        @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  versions       SourceVersion[]
+  requirements   Requirement[]
+  @@unique([projectId, stableKey])
+  @@index([projectId, trust])
+}
+
+model SourceVersion {
+  id             String         @id @default(cuid())
+  sourceId       String
+  version        Int
+  contentHash    String
+  normalizedHash  String
+  contentRef     String
+  createdAt      DateTime       @default(now())
+  source         SourceDocument  @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  requirements   Requirement[]
+  @@unique([sourceId, version])
+  @@index([sourceId, contentHash])
+}
+
+model Requirement {
+  id             String          @id @default(cuid())
+  sourceId       String
+  sourceVersionId String
+  stableKey      String
+  title          String
+  body           String
+  contentHash    String
+  origin         RecordOrigin    @default(REAL)
+  trust          TrustStatus     @default(PENDING)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  source         SourceDocument  @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  sourceVersion  SourceVersion   @relation(fields: [sourceVersionId], references: [id], onDelete: Cascade)
+  claims         Claim[]
+  @@unique([sourceVersionId, stableKey])
+}
+
+model Claim {
+  id             String          @id @default(cuid())
+  projectId      String
+  requirementId  String
+  stableKey      String
+  statement      String
+  contentHash    String
+  origin         RecordOrigin    @default(REAL)
+  trust          TrustStatus     @default(PENDING)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  requirement    Requirement     @relation(fields: [requirementId], references: [id], onDelete: Cascade)
+  useCases       UseCase[]
+  invariants     Invariant[]
+  gateRules      ReleaseGateClaim[]
+  @@unique([projectId, stableKey])
+  @@index([requirementId])
+}
+
+model Invariant {
+  id             String          @id @default(cuid())
+  projectId      String
+  claimId        String
+  stableKey      String
+  title          String
+  statement      String
+  kind           InvariantKind
+  critical       Boolean         @default(false)
+  contentHash    String
+  origin         RecordOrigin    @default(REAL)
+  trust          TrustStatus     @default(PENDING)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  claim          Claim           @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  scenarios      AdversarialScenario[]
+  contracts      ContractInvariant[]
+  gateRules      ReleaseGateInvariant[]
+  @@unique([projectId, stableKey])
+  @@index([claimId, kind, critical])
+}
+
+model AdversarialScenario {
+  id             String          @id @default(cuid())
+  projectId      String
+  invariantId    String
+  stableKey      String
+  title          String
+  objective      String
+  sharedStateRef String?
+  origin         RecordOrigin    @default(REAL)
+  trust          TrustStatus     @default(PENDING)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  invariant      Invariant       @relation(fields: [invariantId], references: [id], onDelete: Cascade)
+  actors         Actor[]
+  synchronizationPoints SynchronizationPoint[]
+  contracts      VerificationContract[]
+  @@unique([projectId, stableKey])
+  @@index([invariantId, trust])
+}
+
+model Actor {
+  id             String              @id @default(cuid())
+  scenarioId     String
+  stableKey      String
+  displayName    String
+  role           String
+  sessionIsolation Boolean           @default(true)
+  authorizationContext Json?
+  createdAt      DateTime            @default(now())
+  scenario       AdversarialScenario @relation(fields: [scenarioId], references: [id], onDelete: Cascade)
+  @@unique([scenarioId, stableKey])
+}
+
+model SynchronizationPoint {
+  id             String              @id @default(cuid())
+  scenarioId     String
+  stableKey      String
+  sequence       Int
+  description    String
+  expectedActorKeys String[]
+  releaseCondition Json
+  timeoutMs      Int?
+  createdAt      DateTime            @default(now())
+  scenario       AdversarialScenario @relation(fields: [scenarioId], references: [id], onDelete: Cascade)
+  @@unique([scenarioId, stableKey])
+  @@unique([scenarioId, sequence])
+}
+
+model UseCase {
+  id             String          @id @default(cuid())
+  projectId      String
+  claimId        String
+  kaneRef        String?
+  stableKey      String
+  title          String
+  outcome        String
+  citation       Json
+  trust          TrustStatus     @default(PENDING)
+  origin         RecordOrigin    @default(REAL)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  claim          Claim           @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  criteria       AcceptanceCriterion[]
+  contracts      VerificationContract[]
+  @@unique([projectId, stableKey])
+  @@index([claimId, trust])
+}
+
+model AcceptanceCriterion {
+  id             String          @id @default(cuid())
+  useCaseId      String
+  stableKey      String
+  statement      String
+  contentHash    String
+  origin         RecordOrigin    @default(REAL)
+  trust          TrustStatus     @default(PENDING)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  useCase        UseCase         @relation(fields: [useCaseId], references: [id], onDelete: Cascade)
+  contracts      ContractCriterion[]
+  coverage       CoverageRecord[]
+  @@unique([useCaseId, stableKey])
+}
+
+model VerificationContract {
+  id             String          @id @default(cuid())
+  projectId      String
+  useCaseId      String
+  adversarialScenarioId String?
+  stableKey      String
+  title          String
+  definitionRef  String
+  contractHash   String
+  sourceHash     String
+  testHash       String
+  status         TrustStatus     @default(PENDING)
+  origin         RecordOrigin    @default(REAL)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  useCase        UseCase         @relation(fields: [useCaseId], references: [id], onDelete: Cascade)
+  adversarialScenario AdversarialScenario? @relation(fields: [adversarialScenarioId], references: [id], onDelete: SetNull)
+  criteria       ContractCriterion[]
+  invariants     ContractInvariant[]
+  runs           VerificationRun[]
+  @@unique([projectId, stableKey])
+  @@index([contractHash])
+}
+
+model ContractInvariant {
+  contractId     String
+  invariantId    String
+  contract       VerificationContract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  invariant      Invariant             @relation(fields: [invariantId], references: [id], onDelete: Cascade)
+  @@id([contractId, invariantId])
+}
+
+model ContractCriterion {
+  contractId     String
+  criterionId    String
+  contract       VerificationContract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  criterion      AcceptanceCriterion  @relation(fields: [criterionId], references: [id], onDelete: Cascade)
+  @@id([contractId, criterionId])
+}
+
+model VerificationRun {
+  id             String             @id @default(cuid())
+  projectId      String
+  contractId     String
+  runRef         String             @unique
+  attempt        Int                @default(1)
+  status         VerificationStatus @default(PENDING)
+  origin         RecordOrigin       @default(REAL)
+  exitCode       Int?
+  reasonCode     String?
+  summary        String?
+  startedAt      DateTime?
+  completedAt    DateTime?
+  sourceHash     String
+  contractHash   String
+  testHash       String
+  createdAt      DateTime           @default(now())
+  project        Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  contract       VerificationContract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  evidencePacks  EvidencePack[]
+  coverageRecords CoverageRecord[]
+  repairs        RepairAttempt[]
+  gitBaseline    GitBaseline?
+  releaseLinks   ReleaseRun[]
+  @@index([projectId, status])
+}
+
+model EvidencePack {
+  id             String          @id @default(cuid())
+  projectId      String
+  runId          String
+  packRef        String
+  status         EvidenceStatus  @default(PENDING)
+  origin         RecordOrigin    @default(REAL)
+  verifiedAt     DateTime?
+  createdAt      DateTime        @default(now())
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  run            VerificationRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  artifacts      EvidenceArtifact[]
+  @@unique([runId, packRef])
+}
+
+model EvidenceArtifact {
+  id             String         @id @default(cuid())
+  packId         String
+  kind           String
+  locator        String
+  sha256         String?
+  metadata       Json?
+  createdAt      DateTime       @default(now())
+  pack           EvidencePack   @relation(fields: [packId], references: [id], onDelete: Cascade)
+}
+
+model CoverageRecord {
+  id             String             @id @default(cuid())
+  projectId      String
+  criterionId    String
+  runId          String?
+  designed       Boolean
+  proven         Boolean
+  status         VerificationStatus
+  explanation    String
+  createdAt      DateTime           @default(now())
+  project        Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  criterion      AcceptanceCriterion @relation(fields: [criterionId], references: [id], onDelete: Cascade)
+  run            VerificationRun?   @relation(fields: [runId], references: [id], onDelete: SetNull)
+  @@index([projectId, proven, status])
+}
+
+model DriftEvent {
+  id             String       @id @default(cuid())
+  projectId      String
+  sourceId       String?
+  previousHash   String
+  currentHash    String
+  reason         String
+  status         TrustStatus @default(PENDING)
+  createdAt      DateTime     @default(now())
+  project        Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  @@index([projectId, status])
+}
+
+model RepairAttempt {
+  id             String             @id @default(cuid())
+  projectId      String
+  runId          String
+  attempt        Int
+  status         VerificationStatus @default(PENDING)
+  allowedPaths   String[]
+  changedPaths   String[]
+  promptHash     String
+  diffHash       String?
+  createdAt      DateTime           @default(now())
+  project        Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  run            VerificationRun   @relation(fields: [runId], references: [id], onDelete: Cascade)
+  agentRuns      AgentRun[]
+  @@unique([runId, attempt])
+}
+
+model ReleaseDecision {
+  id             String        @id @default(cuid())
+  projectId      String
+  candidateId    String?
+  gateId         String?
+  releaseRef     String        @unique
+  status         ReleaseStatus @default(PENDING)
+  rationale      String
+  evidenceHash   String?
+  createdAt      DateTime      @default(now())
+  project        Project       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  candidate      ReleaseCandidate? @relation(fields: [candidateId], references: [id], onDelete: SetNull)
+  gate           ReleaseGate?  @relation(fields: [gateId], references: [id], onDelete: SetNull)
+  runs           ReleaseRun[]
+  @@index([candidateId, status])
+}
+
+model ReleaseCandidate {
+  id             String          @id @default(cuid())
+  projectId      String
+  candidateRef   String          @unique
+  version        String
+  sourceSnapshotHash String
+  repositoryBaselineHash String
+  contractSetHash String
+  createdAt      DateTime        @default(now())
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  gates          ReleaseGate[]
+  decisions      ReleaseDecision[]
+  @@index([projectId, createdAt])
+}
+
+model ReleaseGate {
+  id             String             @id @default(cuid())
+  candidateId    String
+  stableKey      String
+  policyHash     String
+  verdict        ReleaseGateVerdict @default(PENDING)
+  reasonGraph    Json?
+  evaluatedAt    DateTime?
+  createdAt      DateTime           @default(now())
+  candidate      ReleaseCandidate   @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  requiredClaims ReleaseGateClaim[]
+  criticalInvariants ReleaseGateInvariant[]
+  decisions      ReleaseDecision[]
+  @@unique([candidateId, stableKey])
+  @@index([candidateId, verdict])
+}
+
+model ReleaseGateClaim {
+  gateId         String
+  claimId        String
+  required       Boolean     @default(true)
+  gate           ReleaseGate @relation(fields: [gateId], references: [id], onDelete: Cascade)
+  claim          Claim       @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  @@id([gateId, claimId])
+}
+
+model ReleaseGateInvariant {
+  gateId         String
+  invariantId    String
+  required       Boolean     @default(true)
+  gate           ReleaseGate @relation(fields: [gateId], references: [id], onDelete: Cascade)
+  invariant      Invariant   @relation(fields: [invariantId], references: [id], onDelete: Cascade)
+  @@id([gateId, invariantId])
+}
+
+model ReleaseRun {
+  releaseId      String
+  runId          String
+  release        ReleaseDecision @relation(fields: [releaseId], references: [id], onDelete: Cascade)
+  run            VerificationRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  @@id([releaseId, runId])
+}
+
+model CreditLedgerEntry {
+  id             String           @id @default(cuid())
+  projectId      String
+  operation      String
+  reason         String
+  expectedValue  String
+  balanceBefore  Decimal?
+  expectedAfter  Decimal?
+  actualCost     Decimal?
+  balanceAfter   Decimal?
+  costStatus     CreditCostStatus @default(UNKNOWN)
+  operationRef   String?
+  createdAt      DateTime         @default(now())
+  project        Project          @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  @@index([projectId, createdAt])
+}
+
+model GitBaseline {
+  id             String           @id @default(cuid())
+  projectId      String
+  runId          String           @unique
+  baselineSha    String
+  resultSha      String?
+  diffHash       String?
+  changedPaths   String[]
+  capturedAt     DateTime          @default(now())
+  project        Project          @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  run            VerificationRun  @relation(fields: [runId], references: [id], onDelete: Cascade)
+}
+
+model AgentRun {
+  id             String          @id @default(cuid())
+  projectId      String
+  repairId       String?
+  provider       String
+  status         VerificationStatus @default(PENDING)
+  promptHash     String
+  changedPaths   String[]
+  summary        String?
+  createdAt      DateTime        @default(now())
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  repair         RepairAttempt?  @relation(fields: [repairId], references: [id], onDelete: SetNull)
+}
