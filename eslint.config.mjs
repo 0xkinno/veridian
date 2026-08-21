@@ -11,6 +11,7 @@ export default [
     ignores: [".next/**", "coverage/**", "dist/**", "research/**", "generated/**"],
     rules: {
       "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
     },
   },
 ];
