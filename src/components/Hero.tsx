@@ -5,10 +5,11 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="hero-section relative bg-[#0b0f12] overflow-hidden" id="product">
-      {/* Subtle ambient glow — no background image */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#48997a]/5 rounded-full blur-[160px]" />
-      </div>
+      {/* Background Hero Visual Artwork */}
+      <div
+        className="hero-background-image"
+        style={{ backgroundImage: `url('/veridian_hero.jpg')` }}
+      />
 
       <div className="hero-content relative z-10">
         <div className="hero-eyebrow">
