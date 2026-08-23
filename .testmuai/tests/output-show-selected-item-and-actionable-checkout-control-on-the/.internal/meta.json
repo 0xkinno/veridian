@@ -1,0 +1,18 @@
+{
+  "commit_id": "144882b7-19e1-4607-987d-3f1d3c1c4d28",
+  "test_id": "304ffac8-925a-4ab4-94b5-135b1d163070",
+  "testcase_id": "01M0PXA004KZJWN037DN20G7HA",
+  "project_id": "01M0J2479ASNZMT9259411TYJC",
+  "folder_id": "01M0JK5ZJMXJJ0BE5STD7ZC1HG",
+  "org_id": "3283878",
+  "session_name": "show-selected-item-and-actionable-checkout-control-on-the",
+  "executions": [
+    {
+      "execution_id": "993f6956-c7f4-454b-af89-68e9be3b3368",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-23T09:09:53.133Z"
+    }
+  ]
+}

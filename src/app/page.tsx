@@ -1,21 +1,16 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { PromiseGraphSection } from "@/components/PromiseGraphSection";
-import { SignatureDemoSection } from "@/components/SignatureDemoSection";
-import { ConsolePreviewSection } from "@/components/ConsolePreviewSection";
-import { AdversarialSection } from "@/components/AdversarialSection";
-import { Footer } from "@/components/Footer";
+import Link from "next/link";
+import { getAssuranceSnapshot } from "@/lib/assurance-data";
 
 export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-[#0b0f12] text-[#f0f4f2]">
-      <Navbar />
-      <Hero />
-      <PromiseGraphSection />
-      <SignatureDemoSection />
-      <ConsolePreviewSection />
-      <AdversarialSection />
-      <Footer />
-    </div>
-  );
+  const snapshot = getAssuranceSnapshot();
+  return <main className="landing-page">
+    <nav className="editorial-nav"><Link href="/" className="wordmark">VERIDIAN</Link><div className="nav-center"><a href="#method">Method</a><Link href="/workspace">Promise graph</Link><Link href="/proof">Proof</Link></div><Link href="/checkout" className="nav-cta">Open specimen <span>↗</span></Link></nav>
+    <section className="editorial-hero"><div className="hero-copy"><span className="proof-kicker"><i /> Release assurance for AI-built software</span><h1>Catch the promises<br />your product<br /><em>no longer keeps.</em></h1><p>VERIDIAN turns a written requirement into a chain of browser evidence. When a feature looks right but behaves wrong, Kane finds the break, the repair stays bounded, and the same contract proves the fix.</p><div className="hero-actions"><Link href="/workspace" className="button primary">Explore the promise graph</Link><Link href="/checkout" className="button text">Try the checkout <span>→</span></Link></div></div>
+      <div className="hero-graph" aria-label="Promise graph overview"><div className="graph-orbit orbit-one" /><div className="graph-orbit orbit-two" /><div className="graph-core"><span>Current assurance</span><strong>{snapshot.coverage.percentage}%</strong><small>{snapshot.coverage.proven} of {snapshot.coverage.designed} designed contracts proven</small></div><div className="graph-node source"><span>01 / SOURCE</span><b>Requirement</b><small>SHA {snapshot.source.hash.slice(0, 8)}</small></div><div className="graph-node claim"><span>02 / CLAIM</span><b>Discount changes total</b><small>Source-cited</small></div><div className="graph-node test"><span>03 / KANE</span><b>{snapshot.tests.length} browser contracts</b><small>Real Chrome target</small></div><div className="graph-node evidence"><span>04 / EVIDENCE</span><b>{snapshot.evidencePacks} sealed packs</b><small>{snapshot.evidencePacks ? "Inspectable" : "Verification owed"}</small></div></div>
+    </section>
+    <section className="signal-strip"><div><span>Source</span><strong>1 requirement</strong></div><div><span>Designed</span><strong>{snapshot.tests.length} contracts</strong></div><div><span>Evidence</span><strong>{snapshot.evidencePacks} sealed packs</strong></div><div><span>Kane balance</span><strong>{snapshot.ledgerBalance} credits</strong></div></section>
+    <section className="method-section" id="method"><div className="method-heading"><span className="proof-kicker">The closed loop</span><h2>Requirements should not end as prose.</h2><p>They should become living contracts that can explain what failed, constrain what changes, and prove what passed.</p></div><div className="method-grid">{[["01","Ingest","Kane reads the checkout requirement and extracts testable use cases with citations."],["02","Verify","Persistent contracts drive the real interface and compare the rendered outcome to the promise."],["03","Repair","Failure evidence becomes a bounded packet. Application code may change; the contract may not."],["04","Prove","The same test runs again. Coverage moves only when sealed evidence exists."]].map(([n,t,d]) => <article key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></section>
+    <section className="case-section"><div><span className="proof-kicker">The specimen</span><h2>The discount appears.<br />The total lies.</h2><p>A common interface failure hides in plain sight: SAVE20 displays a correct discount line while the final amount ignores it. A screenshot looks convincing. A browser contract reading the actual total does not.</p><Link href="/checkout" className="button secondary">Inspect the live checkout</Link></div><div className="math-card"><span>Checkout / SAVE20</span><div><small>Subtotal</small><strong>$49.99</strong></div><div><small>Discount</small><strong className="green">−$10.00</strong></div><div><small>Expected total + tax</small><strong>$43.19</strong></div><div className="math-alert"><small>Broken total</small><strong>$53.99</strong><b>Promise violated</b></div></div></section>
+    <footer className="editorial-footer"><div><Link href="/" className="wordmark">VERIDIAN</Link><p>Requirement intelligence for product teams shipping with coding agents.</p></div><div><Link href="/workspace">Workspace</Link><Link href="/proof">Proof</Link><Link href="/checkout">Checkout</Link></div><span>Built around Kane’s assurance pipeline.</span></footer>
+  </main>;
 }

@@ -6,21 +6,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#070a0d] py-16 px-6 md:px-12 text-[#f0f4f2]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-white/10">
-        {/* Top: Logo ([small V icon] VERIDIAN) + Tagline */}
-        <div className="space-y-3 max-w-lg">
-          <Link href="/" className="inline-flex items-center gap-2.5">
-            <svg className="w-5 h-5 text-[#48997a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 5l8 14L20 5" />
-              <path d="M8 5l4 7 4-7" />
-            </svg>
-            <span className="font-display text-2xl font-bold tracking-widest text-white">
-              VERIDIAN
-            </span>
-          </Link>
-          <p className="text-sm text-gray-400 font-sans leading-relaxed">
-            Release-assurance system that turns software promises into executable proof.
-          </p>
-        </div>
+        
 
         {/* Links: DOCS ↗, GITHUB ↗ (https://github.com/0xkinno/veridian), CONSOLE ↗ (/console) */}
         <div className="flex flex-wrap items-center gap-8 font-mono text-xs tracking-wider">

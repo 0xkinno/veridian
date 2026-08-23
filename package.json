@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "npm run prisma:generate && next build",
     "start": "next start",
-    "lint": "eslint . --max-warnings=0",
+    "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

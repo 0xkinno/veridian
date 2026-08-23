@@ -87,10 +87,7 @@ export function ConsoleApp({ initialTab = "overview" }: ConsoleAppProps) {
         {/* Top-Left Brand Capsule */}
         <div className="flex items-center justify-between px-3 py-3 mb-6 border-b border-white/10">
           <Link href="/" className="inline-flex items-center gap-2 font-display text-xl font-bold tracking-wider text-white">
-            <svg className="w-5 h-5 text-[#48997a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 5l8 14L20 5" />
-              <path d="M8 5l4 7 4-7" />
-            </svg>
+            
             VERIDIAN
           </Link>
           <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#48997a]/20 text-[#48997a] border border-[#48997a]/30 font-bold">

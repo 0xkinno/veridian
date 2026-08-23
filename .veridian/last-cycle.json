@@ -1,0 +1,9 @@
+{
+  "repair": {"file": "src/lib/checkout.ts", "change": "taxableAmount = subtotal - discountAmount"},
+  "contract": {"path": ".testmuai/tests/discounted-checkout-completion-and-33411/Checkout-Qty-Discount/complete-checkout-with-quantity-update_test.md", "hash": "generated-by-kane"},
+  "runs": [
+    {"sessionId":"88e71912-7c5a-4260-90de-64baa0d57f3d","runId":"run-0","status":"PASSED","classification":"automation_bug/adaptive_expected_value","confirmedProductBug":false,"credits":29.72664,"evidence":".veridian/runs/fail-run.ndjson"},
+    {"sessionId":"cc8546ff-fe2f-4865-b9a2-30f37aec1db0","runId":"run-0","status":"FAILED","classification":"automation_bug/test_data_issue","confirmedProductBug":false,"credits":4.36925,"evidence":".veridian/runs/pass-run.ndjson"}
+  ],
+  "coverage": {"designed": "8/8", "proven": "2/8", "failing": 3, "notYetRun": 3}
+}
