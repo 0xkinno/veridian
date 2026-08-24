@@ -12,3 +12,6 @@ coverage/
 doc/
 
 .vercel
+
+/Internal_docs/
+/doc/COMPETITIVE_ANALYSIS.md
