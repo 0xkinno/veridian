@@ -1,0 +1,38 @@
+[
+  {
+    "ref": "uc-1",
+    "resolution": "approved",
+    "decision": "HUMAN_APPROVED",
+    "decidedAt": "2026-08-21T14:30:00.000Z",
+    "sourceId": "checkout-requirement",
+    "sourceVersion": 1,
+    "sourceHash": "sha256:d08951a00ad3bfdb65e7e05e1651dc9781d4d739e48930fe2b805b6d49792b42",
+    "reviewer": "human-owner",
+    "note": "Approved for Kane test design and continuation of Phase 2."
+  }
+  ,
+  {
+    "refs": ["ac-1", "ac-2", "ac-3", "ac-4", "ac-5", "ac-6"],
+    "resolution": "approved",
+    "decision": "HUMAN_APPROVED",
+    "decidedAt": "2026-08-21T15:40:00.000Z",
+    "sourceId": "checkout-requirement",
+    "sourceVersion": 1,
+    "sourceHash": "sha256:d08951a00ad3bfdb65e7e05e1651dc9781d4d739e48930fe2b805b6d49792b42",
+    "useCase": "uc-1",
+    "reviewer": "human-owner",
+    "note": "Approved derived acceptance criteria for automatic continuation; unresolved runtime input gaps remain explicit."
+  },
+  {
+    "refs": ["ac-7", "ac-8", "sc-1", "sc-2", "sc-3", "t-1", "t-2", "t-3"],
+    "resolution": "approved",
+    "decision": "HUMAN_APPROVED",
+    "decidedAt": "2026-08-21T16:00:00.000Z",
+    "sourceId": "checkout-requirement",
+    "sourceVersion": 1,
+    "sourceHash": "sha256:d08951a00ad3bfdb65e7e05e1651dc9781d4d739e48930fe2b805b6d49792b42",
+    "useCase": "uc-1",
+    "reviewer": "human-owner",
+    "note": "Automatic continuation approval for completed Kane design, including generated scenarios, tests, and transition criteria."
+  }
+]

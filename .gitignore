@@ -9,9 +9,14 @@ node_modules/
 dist/
 coverage/
 *.tsbuildinfo
-doc/
+doc/*
+!/doc/
+!/doc/EVIDENCE.md
+!/doc/PHASE2_KANE_LEDGER.md
+!/doc/PHASE2_REVIEW_DECISION.json
+!/doc/PRD.md
+!/doc/ARCHITECTURE.md
 
 .vercel
 
 /Internal_docs/
-/doc/COMPETITIVE_ANALYSIS.md
