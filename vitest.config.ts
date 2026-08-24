@@ -7,7 +7,8 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    exclude: ["node_modules", "research", ".next"],
+    include: ["src/**/*.test.ts"],
+    exclude: ["node_modules", "research", "Internal_docs", ".next"],
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
