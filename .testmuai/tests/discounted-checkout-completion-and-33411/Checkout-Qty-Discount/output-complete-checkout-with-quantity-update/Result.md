@@ -1,14 +1,14 @@
 ---
 test: ../complete-checkout-with-quantity-update_test.md
 status: passed
-started: 2026-08-23T19:09:46.019Z
-duration_s: 173
-session_id: 88e71912-7c5a-426f-90de-64baa0d57f3d
+started: 2026-08-23T22:01:04.227Z
+duration_s: 129
+session_id: 74cf8130-4aef-49ed-8b52-9cd2521105a0
 ---
 
 # Complete checkout with quantity update, discount, and payment verification — Result
 
-## Step 1 ✓ passed (129.8s)
+## Step 1 ✓ passed (67s)
 md5: c56576b135800ef979af9880805511f1
 Complete checkout with quantity update, discount, and payment verification
 

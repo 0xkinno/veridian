@@ -1,25 +1,25 @@
 {
-  "test_id": "304ffac8-925a-4ab4-94b5-135b1d163070",
+  "test_id": "2e0c6c01-9a56-412a-9af8-efae13a684e5",
   "version": "v4",
   "auto_heal_version": "AH2",
-  "session_id": "144882b7-19e1-4607-987d-3f1d3c1c4d28",
+  "session_id": "21ccb8cc-5ac1-4805-a73a-3eb947a9123d",
   "org_id": "3283878",
   "user_id": "3453615",
-  "url": "",
-  "start_timestamp": "2026-08-23T09:06:59.052Z",
-  "end_timestamp": "2026-08-23T09:09:50.480Z",
+  "url": "http://127.0.0.1:3000",
+  "start_timestamp": "2026-08-24T03:47:33.082Z",
+  "end_timestamp": "2026-08-24T03:51:32.594Z",
   "status": "success",
-  "commit_id": "144882b7-19e1-4607-987d-3f1d3c1c4d28",
+  "commit_id": "21ccb8cc-5ac1-4805-a73a-3eb947a9123d",
   "instructions": [
     {
       "content_type": "generative_block",
-      "instruction_id": "generative_block_7028c8e826784970ae1b5dc4822fe612",
-      "generative_id": "7028c8e826784970ae1b5dc4822fe612",
+      "instruction_id": "generative_block_02096a06976e4d68b0196c172edca5fb",
+      "generative_id": "02096a06976e4d68b0196c172edca5fb",
       "objective": "Open http://127.0.0.1:3000/checkout in a browser and wait for the checkout page for the selected item \"Field Notes set\" to finish loading.",
       "status": "success",
       "children": [
         {
-          "instruction_id": "f0022e1b-5cda-4a52-9977-6da6b2759a9a",
+          "instruction_id": "fca07b5f-10e6-44a3-869a-891054aae953",
           "instruction_class": "driver_action",
           "module_id": "",
           "instruction": "Navigate to http://127.0.0.1:3000/checkout",
@@ -30,12 +30,12 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "a4f4e6f8-6e5e-4e74-9136-b0c957f24a24",
-              "instruction_id": "f0022e1b-5cda-4a52-9977-6da6b2759a9a",
+              "operation_id": "971c75e2-0ab8-4161-a49a-10e98ff13200",
+              "instruction_id": "fca07b5f-10e6-44a3-869a-891054aae953",
               "instruction": "Navigate to http://127.0.0.1:3000/checkout",
               "intent": "Navigate to http://127.0.0.1:3000/checkout",
-              "operation_start": "2026-08-23T09:07:49.679399+00:00",
-              "operation_end": "2026-08-23T09:07:51.101Z",
+              "operation_start": "2026-08-24T03:49:00.570683+00:00",
+              "operation_end": "2026-08-24T03:49:01.664Z",
               "status": "success",
               "command": "OPEN",
               "name": "",
@@ -57,7 +57,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/a4f4e6f8-6e5e-4e74-9136-b0c957f24a24.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/971c75e2-0ab8-4161-a49a-10e98ff13200.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -149,8 +149,8 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:07:49.679399+00:00",
-          "end_timestamp": "2026-08-23T09:07:51.101Z",
+          "start_timestamp": "2026-08-24T03:49:00.570683+00:00",
+          "end_timestamp": "2026-08-24T03:49:01.664Z",
           "type": "agent_generated",
           "tags": [],
           "html_paths": [],
@@ -176,7 +176,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "7028c8e826784970ae1b5dc4822fe612",
+          "generative_id": "02096a06976e4d68b0196c172edca5fb",
           "plan_id": "",
           "generative_objective": "Open http://127.0.0.1:3000/checkout in a browser and wait for the checkout page for the selected item \"Field Notes set\" to finish loading.",
           "error_message": "",
@@ -192,24 +192,24 @@
       "result_code": null,
       "bifurcation_context": [],
       "approach_reason": [
-        "You asked to wait for the checkout page for the selected item \"Field Notes set\" to finish loading.",
+        "Waited for the checkout page for the selected item \"Field Notes set\" to finish loading.",
         "The checkout page finished loading successfully.",
-        "The run ended on the checkout page."
+        "The run ended on the checkout page at http://127.0.0.1:3000/checkout."
       ],
       "one_liner": null
     },
     {
       "content_type": "generative_block",
-      "instruction_id": "generative_block_49b6869a8b60432592c84a0a3f261a06",
-      "generative_id": "49b6869a8b60432592c84a0a3f261a06",
+      "instruction_id": "generative_block_745f3e49eaf0455eae68f1c1eec0b417",
+      "generative_id": "745f3e49eaf0455eae68f1c1eec0b417",
       "objective": "Assert the checkout page shows the selected item \"Field Notes set\" in the checkout summary.",
       "status": "success",
       "children": [
         {
-          "instruction_id": "83d58565-f7fd-4f93-a6ff-9d77bbe762fa",
+          "instruction_id": "81e8d41e-8eda-490d-ade4-e10c3c069ede",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Checking whether the selected item is present in the checkout summary",
+          "instruction": "Checking the selected item name in the checkout summary",
           "command": "TEXTUAL_ANALYZER",
           "error": null,
           "parent_instruction_id": "",
@@ -217,11 +217,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "c555c01f-d030-49df-976a-455515eaf440",
-              "instruction_id": "83d58565-f7fd-4f93-a6ff-9d77bbe762fa",
-              "instruction": "Checking whether the selected item is present in the checkout summary",
-              "intent": "Checking whether the selected item is present in the checkout summary",
-              "operation_start": "2026-08-23T09:08:35.446770+00:00",
+              "operation_id": "f40d3400-a31b-42c4-b2e2-081f818650fd",
+              "instruction_id": "81e8d41e-8eda-490d-ade4-e10c3c069ede",
+              "instruction": "Checking the selected item name in the checkout summary",
+              "intent": "Checking the selected item name in the checkout summary",
+              "operation_start": "2026-08-24T03:50:20.540251+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -233,7 +233,7 @@
               "frame": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Checking whether the selected item is present in the checkout summary\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the selected item \\\"Field Notes set\\\" is present in the checkout summary\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"!!el(9) && /Field Notes set/i.test(el(9).textContent || '')\",\"wrapped_js\":\"(els) => {\\n  const __m = {9: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (!!el(9) && /Field Notes set/i.test(el(9).textContent || ''));\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=heading[name=\\\"Field Notes set\\\"i]\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the selected item \\\"Field Notes set\\\" is present in the checkout summary\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout page shows the selected item \\\"Field Notes set\\\" in the checkout summary\"}",
+              "sub_instruction_obj": "{\"operation\":\"Checking the selected item name in the checkout summary\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the selected item name in the checkout summary is present as Field Notes set\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(30)?.textContent?.trim() === 'Field Notes set'\",\"wrapped_js\":\"(els) => {\\n  const __m = {30: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(30)?.textContent?.trim() === 'Field Notes set');\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=strong >> internal:has-text=\\\"Field Notes set\\\"i\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the selected item name in the checkout summary is present as Field Notes set\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout page shows the selected item \\\"Field Notes set\\\" in the checkout summary\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -244,14 +244,14 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/c555c01f-d030-49df-976a-455515eaf440.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/f40d3400-a31b-42c4-b2e2-081f818650fd.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
               "url": "",
               "navigation_direction": "",
               "tagified_image_url": "",
-              "query_variable_name": "checkout_summary_selected_item_check",
+              "query_variable_name": "checkout_summary_selected_item",
               "query_variable_value": "true",
               "query_variable_type": "",
               "expected_value": "",
@@ -331,14 +331,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "checkout_summary_selected_item_check": "true"
+                "checkout_summary_selected_item": "true"
               },
               "visual_context": null,
-              "reasoning": "whether the selected item \"Field Notes set\" is present in the checkout summary"
+              "reasoning": "whether the selected item name in the checkout summary is present as Field Notes set"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:08:35.446770+00:00",
+          "start_timestamp": "2026-08-24T03:50:20.540251+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -365,7 +365,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "49b6869a8b60432592c84a0a3f261a06",
+          "generative_id": "745f3e49eaf0455eae68f1c1eec0b417",
           "plan_id": "",
           "generative_objective": "Assert the checkout page shows the selected item \"Field Notes set\" in the checkout summary.",
           "error_message": "",
@@ -373,10 +373,10 @@
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "whether the selected item \"Field Notes set\" is present in the checkout summary"
+          "reasoning": "whether the selected item name in the checkout summary is present as Field Notes set"
         },
         {
-          "instruction_id": "4e23aebf-ce84-45a0-9a50-d044ded95e2d",
+          "instruction_id": "d9244b02-3ba3-4bc7-a7de-e466f26b4b38",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -398,19 +398,19 @@
                       "transforms": [],
                       "json_path": null,
                       "expected": "true",
-                      "extracted_value": "{{checkout_summary_selected_item_check}}",
-                      "store_key": "checkout_summary_selected_item_check",
+                      "extracted_value": "{{checkout_summary_selected_item}}",
+                      "store_key": "checkout_summary_selected_item",
                       "variable_refs": {
-                        "{{checkout_summary_selected_item_check}}": "true"
+                        "{{checkout_summary_selected_item}}": "true"
                       }
                     }
                   ],
                   "sub_checks": [
                     {
                       "description": "the checkout page shows the selected item \"Field Notes set\" in the checkout summary",
-                      "store_key": "checkout_summary_selected_item_check",
+                      "store_key": "checkout_summary_selected_item",
                       "expected_value": "true",
-                      "extracted_value": "{{checkout_summary_selected_item_check}}",
+                      "extracted_value": "{{checkout_summary_selected_item}}",
                       "operator": "equals",
                       "transforms": []
                     }
@@ -433,11 +433,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "a92b2ba0-f602-48bc-869a-a52267e07bdb",
-              "instruction_id": "4e23aebf-ce84-45a0-9a50-d044ded95e2d",
+              "operation_id": "5bfc4c66-20b9-4993-b722-4c3eb0fef736",
+              "instruction_id": "d9244b02-3ba3-4bc7-a7de-e466f26b4b38",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-08-23T09:08:36.374760+00:00",
+              "operation_start": "2026-08-24T03:50:21.301807+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -460,7 +460,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/a92b2ba0-f602-48bc-869a-a52267e07bdb.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/5bfc4c66-20b9-4993-b722-4c3eb0fef736.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -532,19 +532,19 @@
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{checkout_summary_selected_item_check}}",
-                    "store_key": "checkout_summary_selected_item_check",
+                    "extracted_value": "{{checkout_summary_selected_item}}",
+                    "store_key": "checkout_summary_selected_item",
                     "variable_refs": {
-                      "{{checkout_summary_selected_item_check}}": "true"
+                      "{{checkout_summary_selected_item}}": "true"
                     }
                   }
                 ],
                 "sub_checks": [
                   {
                     "description": "the checkout page shows the selected item \"Field Notes set\" in the checkout summary",
-                    "store_key": "checkout_summary_selected_item_check",
+                    "store_key": "checkout_summary_selected_item",
                     "expected_value": "true",
-                    "extracted_value": "{{checkout_summary_selected_item_check}}",
+                    "extracted_value": "{{checkout_summary_selected_item}}",
                     "operator": "equals",
                     "transforms": []
                   }
@@ -565,10 +565,10 @@
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{checkout_summary_selected_item_check}}",
-                    "store_key": "checkout_summary_selected_item_check",
+                    "extracted_value": "{{checkout_summary_selected_item}}",
+                    "store_key": "checkout_summary_selected_item",
                     "variable_refs": {
-                      "{{checkout_summary_selected_item_check}}": "true"
+                      "{{checkout_summary_selected_item}}": "true"
                     }
                   }
                 ],
@@ -612,7 +612,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:08:36.374760+00:00",
+          "start_timestamp": "2026-08-24T03:50:21.301807+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -639,7 +639,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "49b6869a8b60432592c84a0a3f261a06",
+          "generative_id": "745f3e49eaf0455eae68f1c1eec0b417",
           "plan_id": "",
           "generative_objective": "Assert the checkout page shows the selected item \"Field Notes set\" in the checkout summary.",
           "error_message": "",
@@ -655,24 +655,23 @@
       "result_code": null,
       "bifurcation_context": [],
       "approach_reason": [
-        "Opened the checkout page and checked the order summary.",
-        "Confirmed that the selected item, \"Field Notes set,\" appeared in the checkout summary.",
-        "Finished on the checkout page with the expected item shown."
+        "Confirmed on the checkout page that the selected item shown in the order summary was \"Field Notes set\".",
+        "The run finished successfully on the checkout page."
       ],
       "one_liner": null
     },
     {
       "content_type": "generative_block",
-      "instruction_id": "generative_block_80e920fa2c5542078809c75e8e40021a",
-      "generative_id": "80e920fa2c5542078809c75e8e40021a",
+      "instruction_id": "generative_block_3f92aee05bf84e15a936965d80544fb6",
+      "generative_id": "3f92aee05bf84e15a936965d80544fb6",
       "objective": "Assert the checkout page exposes a visible enabled checkout control that is ready for the customer to use.",
       "status": "success",
       "children": [
         {
-          "instruction_id": "db20b8df-5c17-40cd-bfdd-5aad32227851",
+          "instruction_id": "63bcb204-8b71-422b-8fcf-4c291097955c",
           "instruction_class": "driver_action",
           "module_id": "",
-          "instruction": "Checking whether the checkout control is visible and enabled",
+          "instruction": "Checking whether the checkout control is visible",
           "command": "TEXTUAL_ANALYZER",
           "error": null,
           "parent_instruction_id": "",
@@ -680,11 +679,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "94b07d1f-6f38-4ac9-b57d-41fe7ee35c99",
-              "instruction_id": "db20b8df-5c17-40cd-bfdd-5aad32227851",
-              "instruction": "Checking whether the checkout control is visible and enabled",
-              "intent": "Checking whether the checkout control is visible and enabled",
-              "operation_start": "2026-08-23T09:09:07.901454+00:00",
+              "operation_id": "42666753-aa0f-4946-b7b2-168e153504e9",
+              "instruction_id": "63bcb204-8b71-422b-8fcf-4c291097955c",
+              "instruction": "Checking whether the checkout control is visible",
+              "intent": "Checking whether the checkout control is visible",
+              "operation_start": "2026-08-24T03:50:54.853350+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -696,7 +695,7 @@
               "frame": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Checking whether the checkout control is visible and enabled\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the checkout control is visible and enabled\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"(() => { const b = el(34); return !!(b && !b.disabled && b.getAttribute('aria-disabled') !== 'true' && (b.offsetWidth || b.offsetHeight || b.getClientRects().length)); })()\",\"wrapped_js\":\"(els) => {\\n  const __m = {34: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = ((() => { const b = el(34); return !!(b && !b.disabled && b.getAttribute('aria-disabled') !== 'true' && (b.offsetWidth || b.offsetHeight || b.getClientRects().length)); })());\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=button[name=\\\"Pay $\\\"i]\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the checkout control is visible and enabled\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout page exposes a visible enabled checkout control\"}",
+              "sub_instruction_obj": "{\"operation\":\"Checking whether the checkout control is visible\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the checkout control is visible\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"!!(el(36) && (el(36).offsetWidth || el(36).offsetHeight || el(36).getClientRects().length))\",\"wrapped_js\":\"(els) => {\\n  const __m = {36: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (!!(el(36) && (el(36).offsetWidth || el(36).offsetHeight || el(36).getClientRects().length)));\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=button[name=\\\"Pay $\\\"i]\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the checkout control is visible\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout page exposes a visible checkout control\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -707,14 +706,14 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/94b07d1f-6f38-4ac9-b57d-41fe7ee35c99.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/42666753-aa0f-4946-b7b2-168e153504e9.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
               "url": "",
               "navigation_direction": "",
               "tagified_image_url": "",
-              "query_variable_name": "checkout_control_visible_enabled",
+              "query_variable_name": "visible_checkout_control",
               "query_variable_value": "true",
               "query_variable_type": "",
               "expected_value": "",
@@ -794,14 +793,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "checkout_control_visible_enabled": "true"
+                "visible_checkout_control": "true"
               },
               "visual_context": null,
-              "reasoning": "whether the checkout control is visible and enabled"
+              "reasoning": "whether the checkout control is visible"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:09:07.901454+00:00",
+          "start_timestamp": "2026-08-24T03:50:54.853350+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -828,7 +827,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "80e920fa2c5542078809c75e8e40021a",
+          "generative_id": "3f92aee05bf84e15a936965d80544fb6",
           "plan_id": "",
           "generative_objective": "Assert the checkout page exposes a visible enabled checkout control that is ready for the customer to use.",
           "error_message": "",
@@ -836,10 +835,180 @@
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "whether the checkout control is visible and enabled"
+          "reasoning": "whether the checkout control is visible"
         },
         {
-          "instruction_id": "5a194762-85ca-4c8c-b9d5-f15b152909e2",
+          "instruction_id": "85c741f6-e616-4f16-a568-35112a915dfd",
+          "instruction_class": "driver_action",
+          "module_id": "",
+          "instruction": "Checking whether the checkout control is enabled",
+          "command": "TEXTUAL_ANALYZER",
+          "error": null,
+          "parent_instruction_id": "",
+          "classification_layer_resp": [],
+          "classification_error": {},
+          "operations": [
+            {
+              "operation_id": "ddda6b1c-0798-4580-97fb-443093164c69",
+              "instruction_id": "85c741f6-e616-4f16-a568-35112a915dfd",
+              "instruction": "Checking whether the checkout control is enabled",
+              "intent": "Checking whether the checkout control is enabled",
+              "operation_start": "2026-08-24T03:50:54.855345+00:00",
+              "operation_end": "",
+              "status": "success",
+              "command": "TEXTUAL_ANALYZER",
+              "name": "",
+              "target": "",
+              "value": "",
+              "message": "",
+              "operation_dict": "",
+              "frame": "",
+              "error_message": "",
+              "code_snippet": "",
+              "sub_instruction_obj": "{\"operation\":\"Checking whether the checkout control is enabled\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the checkout control is enabled\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"!!(el(36) && !el(36).disabled && el(36).getAttribute('aria-disabled') !== 'true')\",\"wrapped_js\":\"(els) => {\\n  const __m = {36: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (!!(el(36) && !el(36).disabled && el(36).getAttribute('aria-disabled') !== 'true'));\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=button[name=\\\"Pay $\\\"i]\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the checkout control is enabled\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout control is enabled\"}",
+              "test_id": "",
+              "test_version": "",
+              "action": "",
+              "string_to_float": false,
+              "feedback_msg": "",
+              "time_taken": "",
+              "create_time_stamp": "",
+              "update_time_stamp": "",
+              "locator_variable": "",
+              "locator_variable_name": "",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/ddda6b1c-0798-4580-97fb-443093164c69.webp",
+              "alternative_xpaths": [],
+              "attribute": "",
+              "value_description": "",
+              "url": "",
+              "navigation_direction": "",
+              "tagified_image_url": "",
+              "query_variable_name": "enabled_checkout_control",
+              "query_variable_value": "true",
+              "query_variable_type": "",
+              "expected_value": "",
+              "queried_value": "",
+              "operator": "",
+              "assertion_status": "",
+              "query_info_dict": {},
+              "query_content_confidence": "none",
+              "debugging_logs": [],
+              "locator_index": 0,
+              "query_html": "",
+              "user_variables": "[]",
+              "optional_flag": false,
+              "max_retries": 0,
+              "retries_delay": 0,
+              "explicit_wait": 0,
+              "implicit_wait": 0,
+              "tab_index": "",
+              "tab_identifier": "",
+              "scroll_value": 1,
+              "scroll_direction": "",
+              "mi_scroll_payload": {},
+              "sleep_duration": 0,
+              "app_id": "",
+              "manual_interaction_tag": "",
+              "string_to_float_list": [],
+              "js_snippet": "",
+              "code_error": "",
+              "hide": false,
+              "dismiss_dialog": false,
+              "use_v2_mobile_tagging": false,
+              "multiple_inputs": false,
+              "dialog_action": "",
+              "dialog_type": "",
+              "is_coordinates_used_for_interaction": false,
+              "element_coordinates_ratio": [],
+              "element_bounds_ratio": [],
+              "x_coord": null,
+              "y_coord": null,
+              "target_x_coord": null,
+              "target_y_coord": null,
+              "source_description": null,
+              "target_description": null,
+              "use_coordinates": false,
+              "kaneaiMobileTaggingImageLimit": 1,
+              "clicks_order_code": "se_js_ac",
+              "selector": "",
+              "selector_target": "",
+              "math_result_variable_name": "",
+              "math_result_variable_value": "",
+              "expression_tree": {},
+              "assertion_tree": {},
+              "assertion_tree_simplified": {},
+              "network_throttle": {},
+              "is_mobile_offline": false,
+              "autoheal": false,
+              "db_query": "",
+              "db_details": {},
+              "db_query_decoded": "",
+              "is_global_variable": false,
+              "is_global_variable_persist": false,
+              "global_variable_id": "",
+              "wait_for_element_timeout": 0,
+              "failure_condition": "",
+              "screenshot_command": "",
+              "smartui_contents": {},
+              "smartui_results": {},
+              "result_type": "",
+              "result_hint": "",
+              "drag_offset": {},
+              "start_coordinates": {},
+              "end_coordinates": {},
+              "element_rect": null,
+              "is_canvas": false,
+              "until_condition": "",
+              "until_max_retries": 0,
+              "until_settle_ms": 0,
+              "api_data": {},
+              "output_variables": {
+                "enabled_checkout_control": "true"
+              },
+              "visual_context": null,
+              "reasoning": "whether the checkout control is enabled"
+            }
+          ],
+          "status": "success",
+          "start_timestamp": "2026-08-24T03:50:54.855345+00:00",
+          "end_timestamp": "",
+          "type": "agent_generated",
+          "tags": [],
+          "html_paths": [],
+          "optional_flag": false,
+          "max_retries": 0,
+          "retries_delay": 0,
+          "explicit_wait": 0,
+          "implicit_wait": 0,
+          "content_type": "instruction",
+          "js_snippet": "",
+          "user_variables": "[]",
+          "api_data": {},
+          "params_used": false,
+          "hard_assertion": false,
+          "expected_outcome": "",
+          "module_execution_index": 0,
+          "module_version": null,
+          "network_throttle": {},
+          "isEdited": false,
+          "use_query_assertion_v2": false,
+          "db_query": "",
+          "db_details": {},
+          "network_assertion_content": {},
+          "screenshot_command": "",
+          "smartui_contents": {},
+          "generative_id": "3f92aee05bf84e15a936965d80544fb6",
+          "plan_id": "",
+          "generative_objective": "Assert the checkout page exposes a visible enabled checkout control that is ready for the customer to use.",
+          "error_message": "",
+          "error_code": "",
+          "reason": "",
+          "title": "",
+          "used_variables": [],
+          "reasoning": "whether the checkout control is enabled"
+        },
+        {
+          "instruction_id": "e06f5c6a-49c1-4158-a7d9-5a07aa727a3d",
           "instruction_class": "driver_action",
           "module_id": "",
           "instruction": "Checking whether the checkout control is ready for the customer to use",
@@ -850,11 +1019,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "662dee69-65ad-4cc0-9aa9-f5e94f46f943",
-              "instruction_id": "5a194762-85ca-4c8c-b9d5-f15b152909e2",
+              "operation_id": "f134a4aa-cbf8-4848-b6cb-c95cb7a3c455",
+              "instruction_id": "e06f5c6a-49c1-4158-a7d9-5a07aa727a3d",
               "instruction": "Checking whether the checkout control is ready for the customer to use",
               "intent": "Checking whether the checkout control is ready for the customer to use",
-              "operation_start": "2026-08-23T09:09:07.903454+00:00",
+              "operation_start": "2026-08-24T03:50:54.855345+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -866,7 +1035,7 @@
               "frame": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Checking whether the checkout control is ready for the customer to use\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the checkout control is ready for the customer to use\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"(() => { const b = el(34); const text = (b?.innerText || '').trim(); return !!(b && !b.disabled && b.getAttribute('aria-disabled') !== 'true' && (b.offsetWidth || b.offsetHeight || b.getClientRects().length) && /^Pay\\\\s+\\\\$\\\\d/.test(text)); })()\",\"wrapped_js\":\"(els) => {\\n  const __m = {34: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = ((() => { const b = el(34); const text = (b?.innerText || '').trim(); return !!(b && !b.disabled && b.getAttribute('aria-disabled') !== 'true' && (b.offsetWidth || b.offsetHeight || b.getClientRects().length) && /^Pay\\\\s+\\\\$\\\\d/.test(text)); })());\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=button[name=\\\"Pay $\\\"i]\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the checkout control is ready for the customer to use\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout control is ready for the customer to use\"}",
+              "sub_instruction_obj": "{\"operation\":\"Checking whether the checkout control is ready for the customer to use\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the checkout control is ready for the customer to use\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"!!(el(36) && !el(36).disabled && el(36).getAttribute('aria-disabled') !== 'true' && /pay/i.test((el(36).innerText||'').trim()))\",\"wrapped_js\":\"(els) => {\\n  const __m = {36: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (!!(el(36) && !el(36).disabled && el(36).getAttribute('aria-disabled') !== 'true' && /pay/i.test((el(36).innerText||'').trim())));\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:role=button[name=\\\"Pay $\\\"i]\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the checkout control is ready for the customer to use\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"the checkout control is ready for the customer to use\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -877,14 +1046,14 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/662dee69-65ad-4cc0-9aa9-f5e94f46f943.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/f134a4aa-cbf8-4848-b6cb-c95cb7a3c455.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
               "url": "",
               "navigation_direction": "",
               "tagified_image_url": "",
-              "query_variable_name": "checkout_control_ready_for_customer",
+              "query_variable_name": "ready_checkout_control",
               "query_variable_value": "true",
               "query_variable_type": "",
               "expected_value": "",
@@ -964,14 +1133,14 @@
               "until_settle_ms": 0,
               "api_data": {},
               "output_variables": {
-                "checkout_control_ready_for_customer": "true"
+                "ready_checkout_control": "true"
               },
               "visual_context": null,
               "reasoning": "whether the checkout control is ready for the customer to use"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:09:07.903454+00:00",
+          "start_timestamp": "2026-08-24T03:50:54.855345+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -998,7 +1167,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "80e920fa2c5542078809c75e8e40021a",
+          "generative_id": "3f92aee05bf84e15a936965d80544fb6",
           "plan_id": "",
           "generative_objective": "Assert the checkout page exposes a visible enabled checkout control that is ready for the customer to use.",
           "error_message": "",
@@ -1009,7 +1178,7 @@
           "reasoning": "whether the checkout control is ready for the customer to use"
         },
         {
-          "instruction_id": "90842074-6246-4d5a-9f04-a211f0f122c1",
+          "instruction_id": "24bfa24e-07d3-410f-82a4-90da49cb3e25",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -1025,16 +1194,29 @@
                 "assertion_tree": {
                   "sub_results": [
                     {
-                      "description": "the checkout page exposes a visible enabled checkout control",
+                      "description": "the checkout page exposes a visible checkout control",
                       "passed": true,
                       "operator": "equals",
                       "transforms": [],
                       "json_path": null,
                       "expected": "true",
-                      "extracted_value": "{{checkout_control_visible_enabled}}",
-                      "store_key": "checkout_control_visible_enabled",
+                      "extracted_value": "{{visible_checkout_control}}",
+                      "store_key": "visible_checkout_control",
                       "variable_refs": {
-                        "{{checkout_control_visible_enabled}}": "true"
+                        "{{visible_checkout_control}}": "true"
+                      }
+                    },
+                    {
+                      "description": "the checkout control is enabled",
+                      "passed": true,
+                      "operator": "equals",
+                      "transforms": [],
+                      "json_path": null,
+                      "expected": "true",
+                      "extracted_value": "{{enabled_checkout_control}}",
+                      "store_key": "enabled_checkout_control",
+                      "variable_refs": {
+                        "{{enabled_checkout_control}}": "true"
                       }
                     },
                     {
@@ -1044,27 +1226,35 @@
                       "transforms": [],
                       "json_path": null,
                       "expected": "true",
-                      "extracted_value": "{{checkout_control_ready_for_customer}}",
-                      "store_key": "checkout_control_ready_for_customer",
+                      "extracted_value": "{{ready_checkout_control}}",
+                      "store_key": "ready_checkout_control",
                       "variable_refs": {
-                        "{{checkout_control_ready_for_customer}}": "true"
+                        "{{ready_checkout_control}}": "true"
                       }
                     }
                   ],
                   "sub_checks": [
                     {
-                      "description": "the checkout page exposes a visible enabled checkout control",
-                      "store_key": "checkout_control_visible_enabled",
+                      "description": "the checkout page exposes a visible checkout control",
+                      "store_key": "visible_checkout_control",
                       "expected_value": "true",
-                      "extracted_value": "{{checkout_control_visible_enabled}}",
+                      "extracted_value": "{{visible_checkout_control}}",
+                      "operator": "equals",
+                      "transforms": []
+                    },
+                    {
+                      "description": "the checkout control is enabled",
+                      "store_key": "enabled_checkout_control",
+                      "expected_value": "true",
+                      "extracted_value": "{{enabled_checkout_control}}",
                       "operator": "equals",
                       "transforms": []
                     },
                     {
                       "description": "the checkout control is ready for the customer to use",
-                      "store_key": "checkout_control_ready_for_customer",
+                      "store_key": "ready_checkout_control",
                       "expected_value": "true",
-                      "extracted_value": "{{checkout_control_ready_for_customer}}",
+                      "extracted_value": "{{ready_checkout_control}}",
                       "operator": "equals",
                       "transforms": []
                     }
@@ -1087,11 +1277,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "2a5eedef-f63d-453b-b276-6f212d0bb0ea",
-              "instruction_id": "90842074-6246-4d5a-9f04-a211f0f122c1",
+              "operation_id": "44fa0049-646d-46dc-9ff7-f1e9515c8180",
+              "instruction_id": "24bfa24e-07d3-410f-82a4-90da49cb3e25",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-08-23T09:09:08.932061+00:00",
+              "operation_start": "2026-08-24T03:50:55.566171+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -1114,7 +1304,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/2a5eedef-f63d-453b-b276-6f212d0bb0ea.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/44fa0049-646d-46dc-9ff7-f1e9515c8180.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -1180,16 +1370,29 @@
                 "operands": [],
                 "sub_results": [
                   {
-                    "description": "the checkout page exposes a visible enabled checkout control",
+                    "description": "the checkout page exposes a visible checkout control",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{checkout_control_visible_enabled}}",
-                    "store_key": "checkout_control_visible_enabled",
+                    "extracted_value": "{{visible_checkout_control}}",
+                    "store_key": "visible_checkout_control",
                     "variable_refs": {
-                      "{{checkout_control_visible_enabled}}": "true"
+                      "{{visible_checkout_control}}": "true"
+                    }
+                  },
+                  {
+                    "description": "the checkout control is enabled",
+                    "passed": true,
+                    "operator": "equals",
+                    "transforms": [],
+                    "json_path": null,
+                    "expected": "true",
+                    "extracted_value": "{{enabled_checkout_control}}",
+                    "store_key": "enabled_checkout_control",
+                    "variable_refs": {
+                      "{{enabled_checkout_control}}": "true"
                     }
                   },
                   {
@@ -1199,27 +1402,35 @@
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{checkout_control_ready_for_customer}}",
-                    "store_key": "checkout_control_ready_for_customer",
+                    "extracted_value": "{{ready_checkout_control}}",
+                    "store_key": "ready_checkout_control",
                     "variable_refs": {
-                      "{{checkout_control_ready_for_customer}}": "true"
+                      "{{ready_checkout_control}}": "true"
                     }
                   }
                 ],
                 "sub_checks": [
                   {
-                    "description": "the checkout page exposes a visible enabled checkout control",
-                    "store_key": "checkout_control_visible_enabled",
+                    "description": "the checkout page exposes a visible checkout control",
+                    "store_key": "visible_checkout_control",
                     "expected_value": "true",
-                    "extracted_value": "{{checkout_control_visible_enabled}}",
+                    "extracted_value": "{{visible_checkout_control}}",
+                    "operator": "equals",
+                    "transforms": []
+                  },
+                  {
+                    "description": "the checkout control is enabled",
+                    "store_key": "enabled_checkout_control",
+                    "expected_value": "true",
+                    "extracted_value": "{{enabled_checkout_control}}",
                     "operator": "equals",
                     "transforms": []
                   },
                   {
                     "description": "the checkout control is ready for the customer to use",
-                    "store_key": "checkout_control_ready_for_customer",
+                    "store_key": "ready_checkout_control",
                     "expected_value": "true",
-                    "extracted_value": "{{checkout_control_ready_for_customer}}",
+                    "extracted_value": "{{ready_checkout_control}}",
                     "operator": "equals",
                     "transforms": []
                   }
@@ -1234,16 +1445,29 @@
                 "description": "the checkout page exposes a visible enabled checkout control that is ready for the customer to use",
                 "sub_results": [
                   {
-                    "description": "the checkout page exposes a visible enabled checkout control",
+                    "description": "the checkout page exposes a visible checkout control",
                     "passed": true,
                     "operator": "equals",
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{checkout_control_visible_enabled}}",
-                    "store_key": "checkout_control_visible_enabled",
+                    "extracted_value": "{{visible_checkout_control}}",
+                    "store_key": "visible_checkout_control",
                     "variable_refs": {
-                      "{{checkout_control_visible_enabled}}": "true"
+                      "{{visible_checkout_control}}": "true"
+                    }
+                  },
+                  {
+                    "description": "the checkout control is enabled",
+                    "passed": true,
+                    "operator": "equals",
+                    "transforms": [],
+                    "json_path": null,
+                    "expected": "true",
+                    "extracted_value": "{{enabled_checkout_control}}",
+                    "store_key": "enabled_checkout_control",
+                    "variable_refs": {
+                      "{{enabled_checkout_control}}": "true"
                     }
                   },
                   {
@@ -1253,10 +1477,10 @@
                     "transforms": [],
                     "json_path": null,
                     "expected": "true",
-                    "extracted_value": "{{checkout_control_ready_for_customer}}",
-                    "store_key": "checkout_control_ready_for_customer",
+                    "extracted_value": "{{ready_checkout_control}}",
+                    "store_key": "ready_checkout_control",
                     "variable_refs": {
-                      "{{checkout_control_ready_for_customer}}": "true"
+                      "{{ready_checkout_control}}": "true"
                     }
                   }
                 ],
@@ -1300,7 +1524,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:09:08.932061+00:00",
+          "start_timestamp": "2026-08-24T03:50:55.566171+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -1327,7 +1551,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "80e920fa2c5542078809c75e8e40021a",
+          "generative_id": "3f92aee05bf84e15a936965d80544fb6",
           "plan_id": "",
           "generative_objective": "Assert the checkout page exposes a visible enabled checkout control that is ready for the customer to use.",
           "error_message": "",
@@ -1343,21 +1567,22 @@
       "result_code": null,
       "bifurcation_context": [],
       "approach_reason": [
-        "Checked the checkout page to confirm the payment button was visible, enabled, and ready to use.",
-        "Verified that the customer could proceed from the checkout page using the available \"Pay $...\" button.",
-        "Finished on the checkout page with the checkout control ready for use."
+        "Opened the checkout page and checked the payment button.",
+        "Confirmed that the checkout control was visible on the page.",
+        "Confirmed that the checkout control was enabled and ready to use.",
+        "Finished on the checkout page with the payment button available for the customer."
       ],
       "one_liner": null
     },
     {
       "content_type": "generative_block",
-      "instruction_id": "generative_block_46d67656dd7049b88ff7f397bcde21bf",
-      "generative_id": "46d67656dd7049b88ff7f397bcde21bf",
+      "instruction_id": "generative_block_3188a09ae84043d0a02e3dbb25fff0e3",
+      "generative_id": "3188a09ae84043d0a02e3dbb25fff0e3",
       "objective": "Confirm presence check: selected item on the checkout page (exists) — the stated promise: The checkout page shows the selected item.",
       "status": "success",
       "children": [
         {
-          "instruction_id": "749fc946-1132-4e78-8328-63c1509552a3",
+          "instruction_id": "6097946b-fa83-440b-a82c-9779993afa30",
           "instruction_class": "driver_action",
           "module_id": "",
           "instruction": "Checking whether the selected item is present on the checkout page",
@@ -1368,11 +1593,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "25570fb2-7d56-4b46-be2d-74bf73153868",
-              "instruction_id": "749fc946-1132-4e78-8328-63c1509552a3",
+              "operation_id": "b705e0a7-6785-40d7-926e-ee7402f7c298",
+              "instruction_id": "6097946b-fa83-440b-a82c-9779993afa30",
               "instruction": "Checking whether the selected item is present on the checkout page",
               "intent": "Checking whether the selected item is present on the checkout page",
-              "operation_start": "2026-08-23T09:09:40.820066+00:00",
+              "operation_start": "2026-08-24T03:51:28.584819+00:00",
               "operation_end": "",
               "status": "success",
               "command": "TEXTUAL_ANALYZER",
@@ -1384,7 +1609,7 @@
               "frame": "",
               "error_message": "",
               "code_snippet": "",
-              "sub_instruction_obj": "{\"operation\":\"Checking whether the selected item is present on the checkout page\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the selected item is present in the checkout product surface\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"(() => /Field Notes set/i.test(el(6)?.innerText || ''))()\",\"wrapped_js\":\"(els) => {\\n  const __m = {6: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = ((() => /Field Notes set/i.test(el(6)?.innerText || ''))());\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"Verified commerce specimen / 01A checkout simple enough to see. Subtle enough\\\"i\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the selected item is present in the checkout product surface\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"The checkout page shows the selected item.\"}",
+              "sub_instruction_obj": "{\"operation\":\"Checking whether the selected item is present on the checkout page\",\"agent\":\"Operation Agent\",\"operation_dict\":{\"operation_type\":\"TEXTUAL_ANALYZER\"},\"reasoning\":\"whether the selected item is present in the checkout form\",\"variable\":{},\"secrets\":{},\"params\":{},\"code_js\":\"el(13) ? el(13).innerText.includes('Field Notes set') : null\",\"wrapped_js\":\"(els) => {\\n  const __m = {13: 0};\\n  const el = (i) => els[__m[i]];\\n  const __v = (el(13) ? el(13).innerText.includes('Field Notes set') : null);\\n  return (typeof __v === 'boolean' ? String(__v) : __v);\\n}\",\"locators\":[\"internal:text=\\\"Secure checkoutComplete your orderTLS / LIVEFull nameEmail addressBilling\\\"i\"],\"operator\":\"equals\",\"transforms\":[],\"query\":\"whether the selected item is present in the checkout form\",\"expected_value\":\"true\",\"needs_unit_conversion\":false,\"condition\":\"The checkout page shows the selected item.\"}",
               "test_id": "",
               "test_version": "",
               "action": "",
@@ -1395,7 +1620,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/25570fb2-7d56-4b46-be2d-74bf73153868.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/b705e0a7-6785-40d7-926e-ee7402f7c298.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -1485,11 +1710,11 @@
                 "selected_item_present_on_checkout": "true"
               },
               "visual_context": null,
-              "reasoning": "whether the selected item is present in the checkout product surface"
+              "reasoning": "whether the selected item is present in the checkout form"
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:09:40.820066+00:00",
+          "start_timestamp": "2026-08-24T03:51:28.584819+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -1516,7 +1741,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "46d67656dd7049b88ff7f397bcde21bf",
+          "generative_id": "3188a09ae84043d0a02e3dbb25fff0e3",
           "plan_id": "",
           "generative_objective": "Confirm presence check: selected item on the checkout page (exists) — the stated promise: The checkout page shows the selected item.",
           "error_message": "",
@@ -1524,10 +1749,10 @@
           "reason": "",
           "title": "",
           "used_variables": [],
-          "reasoning": "whether the selected item is present in the checkout product surface"
+          "reasoning": "whether the selected item is present in the checkout form"
         },
         {
-          "instruction_id": "ec5ae044-04ee-4c94-bed0-6bf2379aa1fc",
+          "instruction_id": "7e1dd174-fc0a-4a2d-b191-403dfa7bd582",
           "instruction_class": "non_driver_action",
           "module_id": "",
           "instruction": "Assertion check",
@@ -1584,11 +1809,11 @@
           "classification_error": {},
           "operations": [
             {
-              "operation_id": "37bf0a2f-a86f-48f3-9392-24dd7348d294",
-              "instruction_id": "ec5ae044-04ee-4c94-bed0-6bf2379aa1fc",
+              "operation_id": "8edfe204-8626-400f-a6ad-45aa313ab8c7",
+              "instruction_id": "7e1dd174-fc0a-4a2d-b191-403dfa7bd582",
               "instruction": "Assertion check",
               "intent": "Assertion check",
-              "operation_start": "2026-08-23T09:09:41.674181+00:00",
+              "operation_start": "2026-08-24T03:51:29.297054+00:00",
               "operation_end": "",
               "status": "success",
               "command": "ASSERTION",
@@ -1611,7 +1836,7 @@
               "update_time_stamp": "",
               "locator_variable": "",
               "locator_variable_name": "",
-              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/37bf0a2f-a86f-48f3-9392-24dd7348d294.webp",
+              "image_url": "https://prodauteurartefacts.blob.core.windows.net/test-screenshots/test_screenshots/untagged_screenshot/8edfe204-8626-400f-a6ad-45aa313ab8c7.webp",
               "alternative_xpaths": [],
               "attribute": "",
               "value_description": "",
@@ -1763,7 +1988,7 @@
             }
           ],
           "status": "success",
-          "start_timestamp": "2026-08-23T09:09:41.674181+00:00",
+          "start_timestamp": "2026-08-24T03:51:29.297054+00:00",
           "end_timestamp": "",
           "type": "agent_generated",
           "tags": [],
@@ -1790,7 +2015,7 @@
           "network_assertion_content": {},
           "screenshot_command": "",
           "smartui_contents": {},
-          "generative_id": "46d67656dd7049b88ff7f397bcde21bf",
+          "generative_id": "3188a09ae84043d0a02e3dbb25fff0e3",
           "plan_id": "",
           "generative_objective": "Confirm presence check: selected item on the checkout page (exists) — the stated promise: The checkout page shows the selected item.",
           "error_message": "",
@@ -1806,9 +2031,9 @@
       "result_code": null,
       "bifurcation_context": [],
       "approach_reason": [
-        "Opened the checkout page on the local site.",
-        "Confirmed that the selected item, \"Field Notes set,\" was shown in the checkout area.",
-        "Finished on the checkout page with the selected item visible."
+        "Opened the checkout page and reviewed the order details.",
+        "Confirmed that the selected item, \"Field Notes set,\" was shown on the checkout page.",
+        "Finished on the checkout page with the item visible, so the requested check was successful."
       ],
       "one_liner": null
     }
@@ -1816,7 +2041,7 @@
   "modules": [],
   "uploaded_files": [],
   "test_params": [],
-  "test_level_variables": "[{\"name\":\"checkout_summary_selected_item_check\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"checkout_control_visible_enabled\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"checkout_control_ready_for_customer\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"selected_item_present_on_checkout\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"}]",
+  "test_level_variables": "[{\"name\":\"checkout_summary_selected_item\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"visible_checkout_control\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"enabled_checkout_control\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"ready_checkout_control\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"},{\"name\":\"selected_item_present_on_checkout\",\"value\":\"true\",\"value_type\":\"test_level\",\"variable_description\":\"ANALYZE result\"}]",
   "test_global_variables": [],
   "max_network_wait": 0,
   "wait_buffer": 0,

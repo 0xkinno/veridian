@@ -1,0 +1,18 @@
+{
+  "test_id": "68057e65-7402-441e-8e4c-81ef072c5b86",
+  "project_id": "01M0J2479ASNZMT9259411TYJC",
+  "folder_id": "01M0JK5ZJMXJJ0BE5STD7ZC1HG",
+  "org_id": "3283878",
+  "session_name": "reject-incomplete-required-shipping-details-during-checkout",
+  "commit_id": "42415f0f-8ce0-4b0a-b9f3-adc0980ec26c",
+  "testcase_id": "01M0RZTN8RQAH1BCFNTDGYY02J",
+  "executions": [
+    {
+      "execution_id": "b8f2f83e-ed9f-4506-ae64-b5128f05f90b",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-24T04:21:49.371Z"
+    }
+  ]
+}
