@@ -2,6 +2,9 @@
   "runs": [
     {"sessionId":"c16f12d8-ed96-48cf-bd49-a84b88256bc6","runId":"run-0","status":"FAILED","classification":"automation_bug/state_transition_bug","confirmedProductBug":false,"credits":10.4464,"evidence":"56ed0453-dfff-46b2-b24f-83a7a984346c.evidence"},
     {"sessionId":"144882b7-19e1-4607-987d-3f1d3c1c4d28","runId":"run-3","status":"PASSED","classification":"product_verification","confirmedProductBug":false,"credits":23.31135,"evidence":"993f6956-c7f4-454b-af89-68e9be3b3368.evidence"},
-    {"sessionId":"8369b810-b653-4432-a2bb-3f0d67f39ac1","runId":"run-1","status":"FAILED","classification":"automation_bug/locator_rot","confirmedProductBug":false,"credits":7.6853,"evidence":"e0f7662e-d50f-4c69-ad38-f4b28d876514.evidence"}
+    {"sessionId":"8369b810-b653-4432-a2bb-3f0d67f39ac1","runId":"run-1","status":"FAILED","classification":"automation_bug/locator_rot","confirmedProductBug":false,"credits":7.6853,"evidence":"e0f7662e-d50f-4c69-ad38-f4b28d876514.evidence"},
+    {"sessionId":"55d88533-d374-424a-84d2-27f817f4695a","runId":"run-5","status":"PASSED","classification":"value_baseline/$86.38","confirmedProductBug":false,"credits":49.563085,"evidence":".veridian/runs/value-baseline.ndjson"},
+    {"sessionId":"50c011ba-22cf-48e0-ac1d-ba590bb7e5d5","runId":"run-5","status":"FAILED","classification":"application_issue/ui_data_defect/$107.98","confirmedProductBug":true,"credits":2.184375,"evidence":"4c8a7645-a564-414c-9d36-3968cf1389dc.evidence"},
+    {"sessionId":"60945f2b-8eac-4282-a8cd-c5ca7ac307a8","runId":"run-5","status":"PASSED","classification":"repaired_value_assertion/$86.38","confirmedProductBug":false,"credits":2.471375,"evidence":"9afb04c3-3468-4488-8943-1dc684a43962.evidence"}
   ]
 }

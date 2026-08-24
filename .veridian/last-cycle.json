@@ -9,5 +9,19 @@
     {"sessionId":"42415f0f-8ce0-4b0a-b9f3-adc0980ec26c","runId":"run-6","status":"PASSED","classification":"required_shipping_validation","confirmedProductBug":false,"credits":45.218459,"evidence":"b8f2f83e-ed9f-4506-ae64-b5128f05f90b.evidence"},
     {"sessionId":"a0b7a3d7-0fdb-4e30-8276-fb7ebe0a636a","runId":"run-7","status":"PASSED","classification":"checkout_confirmation","confirmedProductBug":false,"credits":57.664804,"evidence":"2e064b5e-b27d-4b8c-8771-236f011000a2.evidence"}
   ],
-  "coverage": {"designed": "8/8", "proven": "8/8", "failing": 0, "notYetRun": 0}
+  "coverage": {"designed": "8/8", "proven": "8/8", "failing": 0, "notYetRun": 0},
+  "valueCycle": {
+    "contractPath": ".testmuai/tests/discount-total-value_test.md",
+    "contractHash": "D4F4BDC89A6B30E648EF2731A7C9C2D09686366BD56F5453582D1A10A3A27D53",
+    "baselineSession": "55d88533-d374-424a-84d2-27f817f4695a",
+    "baselineStatus": "PASSED",
+    "failureSession": "50c011ba-22cf-48e0-ac1d-ba590bb7e5d5",
+    "failureStatus": "FAILED",
+    "failureClassification": "application_issue/ui_data_defect",
+    "failureEvidence": "4c8a7645-a564-414c-9d36-3968cf1389dc",
+    "repairSession": "60945f2b-8eac-4282-a8cd-c5ca7ac307a8",
+    "repairStatus": "VALUE_ASSERTION_PASSED; confirmation assertion locator_rot",
+    "expected": "$86.38",
+    "actual": "$107.98"
+  }
 }
