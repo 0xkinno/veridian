@@ -42,3 +42,23 @@ npm run start
 ```
 
 Open `http://127.0.0.1:3000`. Run checks with `npm run typecheck`, `npm test`, and `npm run lint`. Kane browser verification requires an authenticated Kane CLI session.
+
+## Judge Verification
+
+Start the local app, then use these judge-facing views:
+
+- Promise Graph: [http://127.0.0.1:3000/workspace](http://127.0.0.1:3000/workspace)
+- Proof record: [http://127.0.0.1:3000/proof](http://127.0.0.1:3000/proof)
+- Checkout target: [http://127.0.0.1:3000/checkout](http://127.0.0.1:3000/checkout)
+
+The focused contract `.testmuai/tests/discount-total-value_test.md` reads the rendered Discount and Total values. Its unchanged SHA-256 is `D4F4BDC89A6B30E648EF2731A7C9C2D09686366BD56F5453582D1A10A3A27D53`.
+
+The recorded proof cycle is:
+
+1. Clean baseline: SAVE20 produced a `$20.00` discount and `$86.38` final total.
+2. Bug replay: Kane caught the real application defect when the total remained `$107.98` (`application_issue/ui_data_defect`).
+3. Repair replay: the one-line calculation repair restored the numeric assertion to `$86.38`.
+
+The Promise Graph shows `FAILED -> REPAIRED -> VERIFIED`. Full NDJSON runs, coverage output, balances, evidence IDs, and the final handoff are stored in `.veridian/runs/`, `.veridian/last-cycle.json`, `doc/EVIDENCE.md`, and `doc/PHASE2_KANE_LEDGER.md`.
+
+Coverage currently reports `8/8` designed and `8/8` proven. Typechecking and lint pass; browser route checks for `/`, `/checkout`, `/checkout/orders`, `/workspace`, `/workspace/1`, and `/proof` return HTTP 200.
