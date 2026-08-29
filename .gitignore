@@ -3,7 +3,8 @@
 !.env.example
 .context/
 .testmuai/evidence/
-research/competitors/
+research/
+video/
 node_modules/
 .next/
 dist/

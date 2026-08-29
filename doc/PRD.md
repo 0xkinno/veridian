@@ -2,8 +2,8 @@
 
 ## Evidence taxonomy
 
-- **Verified Kane capability:** supported by the installed Kane CLI 0.8.5 help and/or the versioned official Kane repository documentation under `research/competitors/kane-cli`.
-- **Observed competitor capability:** observed in the cloned StateMirror or Elenchos source/documentation; not a Kane guarantee.
+- **Verified Kane capability:** supported by the installed Kane CLI 0.8.5 help and/or versioned official Kane documentation.
+- **Observed product capability:** demonstrated by committed application behavior and recorded evidence; not assumed from external sources.
 - **Proposed VERIDIAN capability:** product behavior we intend to build in Phase 1+.
 - **Assumption requiring validation:** unresolved until exercised against the target application and current CLI.
 

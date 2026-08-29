@@ -50,7 +50,7 @@ Installed CLI 0.8.5 exposes `context ingest/extract/review/list`, `design tests/
 
 ## Source Precedence
 
-For Kane facts: installed 0.8.5 help first, then official repository documentation at commit `78f38901d945add68288c7b23e6284418ba934bb`, then observed runtime output. Competitor documentation never establishes a Kane capability.
+For Kane facts: installed 0.8.5 help first, then official versioned Kane documentation at commit `78f38901d945add68288c7b23e6284418ba934bb`, then observed runtime output. Only verified Kane sources establish a Kane capability.
 
 ## Validation Required Before Implementation Claims
 

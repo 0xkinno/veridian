@@ -70,6 +70,17 @@ The same contract passes. The Promise Graph proves the lineage.
 
 ---
 
+## Product Links
+
+| Resource | Link |
+|---|---|
+| Live Demo | [veridian-assurance.vercel.app](https://veridian-assurance.vercel.app) |
+| Demo Video | [Watch on YouTube](https://www.youtube.com/watch?v=PLACEHOLDER) |
+| Repository | [github.com/0xkinno/veridian](https://github.com/0xkinno/veridian) |
+| Documentation | [Evidence](doc/EVIDENCE.md) · [Architecture](doc/ARCHITECTURE.md) · [Product Requirements](doc/PRD.md) · [Kane Ledger](doc/PHASE2_KANE_LEDGER.md) · [Review Decision](doc/PHASE2_REVIEW_DECISION.json) |
+
+---
+
 ## The Problem
 
 Sarah leads a product team that ships with AI coding agents. On Tuesday, she writes a release requirement:
@@ -342,24 +353,6 @@ All evidence is real and stored in the repository.
 
 ---
 
-## Demo Video
-
-<!-- Replace with actual YouTube link -->
-**[Watch the 3-minute demo](#)**
-
-| Timestamp | What You See |
-|---|---|
-| 0:00 - 0:10 | The problem: discount displays but total is wrong |
-| 0:10 - 0:30 | The checkout app, SAVE20 applied, $107.98 vs $86.38 |
-| 0:30 - 0:50 | Kane ingests, extracts, designs from the requirement |
-| 0:50 - 1:20 | Kane runs in real Chrome, catches the wrong total |
-| 1:20 - 1:50 | Failure evidence feeds to agent, one-line repair |
-| 1:50 - 2:10 | Same Kane contract, same hash, now passes |
-| 2:10 - 2:35 | Promise Graph and proof page with real evidence |
-| 2:35 - 3:00 | Coverage: 8/8. Every requirement promise proven. |
-
----
-
 ## Target User
 
 **Who:** Sarah, a product engineering lead at a Series B SaaS company. Her team ships 15 features a month using AI coding agents.
@@ -400,28 +393,7 @@ Everything in this repository was built during the hackathon period for the Kane
 | Verification orchestrator | Built from scratch |
 | Kane NDJSON parser | Built from scratch |
 | Coverage dashboard | Built from scratch |
-| Competitive analysis (5 competitors) | Original research |
 | 40 unit/integration tests | Built from scratch |
-
----
-
-## Competitive Position
-
-VERIDIAN was designed to use Kane CLI at the deepest available level. The competitive analysis studied five other submissions.
-
-| Capability | VERIDIAN | Closest Competitor |
-|---|---|---|
-| `context ingest` | Yes | 1 of 5 |
-| `context extract` | Yes | 1 of 5 |
-| `design tests` | Yes | 1 of 5 |
-| `testmd run` | Yes | 5 of 5 |
-| `cover` / `cover gaps` | Yes | 0 of 5 |
-| Requirement-to-evidence lineage | Promise Graph | None |
-| Coverage against requirements | 8/8 proven | None |
-| Real fail-to-repair-to-pass cycle | Yes | 2 of 5 |
-| Premium editorial UI | Yes | 1 of 5 |
-
-Full competitor analysis: [`doc/COMPETITIVE_ANALYSIS.md`](doc/COMPETITIVE_ANALYSIS.md)
 
 ---
 
@@ -519,7 +491,7 @@ runner/                     Verification orchestrator, repair packets, agent ada
 prisma/                     Schema: sources, claims, criteria, evidence, runs, repairs
 .testmuai/tests/            Kane _test.md contracts (committed, replayed free)
 .veridian/                  Evidence artifacts, cycle records, coverage snapshots
-doc/                        Requirement source, evidence log, credit ledger, competitor analysis
+doc/                        Requirement source, evidence log, architecture, and credit ledger
 assets/                     Banner, screenshots
 ```
 

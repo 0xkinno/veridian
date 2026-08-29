@@ -60,7 +60,6 @@ Before every paid operation: query balance, append operation/reason/expected val
 
 ## Proof-cycle hardening — 2026-08-24
 
-- Lens competitor repository is present at `research/competitors/lens` (commit `a2bde50`) and was audited for its Stop hook, `.lens` baseline/flow-map, JSON store, Seatline UI, and Kane contracts. Findings are recorded in `doc/COMPETITIVE_ANALYSIS.md` and `doc/COMPETITIVE_COMPARISON.md`.
 - Stale generated `output-*` recordings were removed before clean re-authoring.
 - Clean baseline authoring session `74cf8130-4aef-49ed-8b52-9cd2521105a0` passed and consumed `13.786275` credits. Its generated observables confirm total presence, not a numeric `$86.38` equality.
 - Bug-mode manual API verification returned `$107.98`; strict replay session `397b96bd-f934-46b0-9d94-ab65e968198e` passed because the contract only checked that a total exists. This is documented as a contract-quality limitation, not a product-failure verdict.
