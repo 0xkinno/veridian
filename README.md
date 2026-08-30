@@ -25,7 +25,7 @@ Kane CLI reads the requirement. Extracts the claims. Designs the browser tests.
 Runs them in real Chrome. Catches the broken promise. The agent repairs one line.
 The same contract passes. The Promise Graph proves the lineage.
 
-**[Promise Graph (/workspace)](http://localhost:3000/workspace)** · **[Proof Record (/proof)](http://localhost:3000/proof)** · **[Checkout Demo (/checkout)](http://localhost:3000/checkout)** · **[Demo Video](#demo-video)**
+**[Promise Graph (/workspace)](https://veridian-assurance.vercel.app/workspace)** · **[Proof Record (/proof)](https://veridian-assurance.vercel.app/proof)** · **[Checkout Demo (/checkout)](https://veridian-assurance.vercel.app/checkout)** · **[Demo Video](https://youtu.be/8-xymaRgPIM?si=-E_F9O983n9hchL_)**
 
 </div>
 
@@ -75,7 +75,7 @@ The same contract passes. The Promise Graph proves the lineage.
 | Resource | Link |
 |---|---|
 | Live Demo | [veridian-assurance.vercel.app](https://veridian-assurance.vercel.app) |
-| Demo Video | [Watch on YouTube](https://www.youtube.com/watch?v=PLACEHOLDER) |
+| Demo Video | [Watch on YouTube](https://youtu.be/8-xymaRgPIM?si=-E_F9O983n9hchL_) |
 | Repository | [github.com/0xkinno/veridian](https://github.com/0xkinno/veridian) |
 | Documentation | [Evidence](doc/EVIDENCE.md) · [Architecture](doc/ARCHITECTURE.md) · [Product Requirements](doc/PRD.md) · [Kane Ledger](doc/PHASE2_KANE_LEDGER.md) · [Review Decision](doc/PHASE2_REVIEW_DECISION.json) |
 
